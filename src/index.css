@@ -2,9 +2,9 @@
 
 @theme {
   --color-dmci-navy: #002147;
-  --color-dmci-gold: #D4AF37;
-  --color-dmci-gold-light: #E5C76B;
-  --color-off-white: #F5F2ED;
+  --color-dmci-navy-light: #003366;
+  --color-off-white: #FFFFFF;
+  --color-border-gray: #E5E7EB;
   
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
@@ -12,11 +12,11 @@
 
 @layer base {
   body {
-    @apply bg-off-white text-dmci-navy font-sans;
+    @apply bg-white text-dmci-navy font-sans antialiased;
   }
   
   h1, h2, h3, h4 {
-    @apply font-serif;
+    @apply font-serif font-semibold;
   }
 }
 
