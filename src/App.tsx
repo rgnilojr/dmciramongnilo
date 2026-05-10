@@ -13,7 +13,7 @@ const projects = [
     type: "Resort-Style Condominium",
     image: "/clubhousempl1.png",
     price: "₱10.1M – ₱12.9M",
-    terms: "12% DP in 50 months",
+    terms: "12% DP in 50 months, 0% Interest",
     promo: "Reservation at ₱20,000 until May 31, 2026",
     description: "An Asian-Tropical inspired community that offers a serene and relaxed living environment."
   },
@@ -38,7 +38,7 @@ export default function App() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-dmci-navy selection:text-white">
+    <main className="min-h-screen flex flex-col selection:bg-dmci-navy selection:text-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-dmci-navy/10">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -67,7 +67,7 @@ export default function App() {
         </div>
       </nav>
 
-      <main>
+      <div className="flex-grow">
         {/* Hero Section */}
       <section className="pt-40 pb-20 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -207,7 +207,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      </main>
+      </div>
 
       {/* Footer */}
       <footer id="contact" className="bg-dmci-navy text-white py-24 pb-12 px-6">
@@ -292,6 +292,6 @@ export default function App() {
         <MessageCircle className="w-5 h-5 text-white" />
         <span className="font-bold text-xs uppercase tracking-[0.2em]">DIRECT INQUIRY</span>
       </motion.a>
-    </div>
+    </main>
   );
 }
