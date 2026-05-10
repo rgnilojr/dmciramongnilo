@@ -67,7 +67,8 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      <main>
+        {/* Hero Section */}
       <section className="pt-40 pb-20 px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -206,6 +207,7 @@ export default function App() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer id="contact" className="bg-dmci-navy text-white py-24 pb-12 px-6">
@@ -225,8 +227,17 @@ export default function App() {
                 Dedicated to providing high-end real estate solutions with transparency and integrity.
               </p>
               <div className="flex gap-4">
-                {[MessageCircle, Phone, Mail].map((Icon, idx) => (
-                  <a key={idx} href="#" className="w-12 h-12 rounded-sm border border-white/10 flex items-center justify-center hover:bg-white hover:text-dmci-navy transition-all duration-500">
+                {[
+                  { Icon: MessageCircle, label: "Message via Viber/WhatsApp" },
+                  { Icon: Phone, label: "Call Ramon" },
+                  { Icon: Mail, label: "Email Ramon" }
+                ].map(({ Icon, label }, idx) => (
+                  <a 
+                    key={idx} 
+                    href="#" 
+                    aria-label={label}
+                    className="w-12 h-12 rounded-sm border border-white/10 flex items-center justify-center hover:bg-white hover:text-dmci-navy transition-all duration-500"
+                  >
                     <Icon className="w-5 h-5" />
                   </a>
                 ))}
