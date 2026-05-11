@@ -25,7 +25,7 @@ const projects = [
     description: "Modern living at its finest, featuring spacious units and world-class amenities."
   },
   {
-    name: "Maple Place",
+    name: "Mapple Place",
     location: "Acacia Estates, Taguig",
     type: "Boutique Condominium",
     image: "https://images.unsplash.com/photo-1493397212122-2b85edf59fd6?auto=format&fit=crop&q=80&w=800",
